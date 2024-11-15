@@ -14,3 +14,5 @@ app.get('/projects', (req, res) => {
     { title: 'Cybersecurity Capstone', description: 'Secured a VM using Nmap', link: 'https://github.com/AbbasHussainSyed/Cybersecurity-Capstone-Project' }
   ]);
 });
+
+module.exports = app;
