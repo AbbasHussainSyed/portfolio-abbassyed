@@ -1,13 +1,39 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 function Projects() {
-    const [projects, setProjects] = useState([]);
-
-    useEffect(() => {
-        fetch('http://localhost:5000/projects')
-            .then(response => response.json())
-            .then(data => setProjects(data));
-    }, []);
+    // Static project data
+    const projects = [
+        {
+            title: 'Algo Game',
+            description: 'An educational game on recursion',
+            link: 'https://github.com/comp-229/algogame'
+        },
+        {
+            title: 'Car Data Analysis',
+            description: 'Analysis of car prices using Python',
+            link: 'https://github.com/AbbasHussainSyed/PythonProjects/tree/main/CAR%20DATA%20ANALYSIS'
+        },
+        {
+            title: 'Cybersecurity Capstone',
+            description: 'Secured a VM using Nmap',
+            link: 'https://github.com/AbbasHussainSyed/Cybersecurity-Capstone-Project'
+        },
+        {
+            title: 'E-commerce Website',
+            description: 'An e-commerce platform built with MERN stack',
+            link: 'https://final-abbassyed-finalproject-deploy.onrender.com/'
+        },
+        {
+            title: 'LA Hacks 2024',
+            description: 'Developed Air Jordan’s Shoe discussion platform using MERN',
+            link: 'https://github.com/BustosAndrew/lahacks'
+        },
+        {
+            title: 'Chef.AI',
+            description: 'A recipe generator using Gemini and Reflex API',
+            link: 'https://github.com/YourChefAIRepoLink'
+        }
+    ];
 
     return (
         <section className="projects py-10 sm:py-20 bg-white px-4">
